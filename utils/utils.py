@@ -42,11 +42,9 @@ def get_wallets(number_to_start_from: int = 1):
         sys.exit()
     
     if SETTINGS.RANDOM_WALLETS:
-        accounts = random.shuffle(ACCOUNTS)
-    else:
-        accounts = ACCOUNTS
+        random.shuffle(ACCOUNTS)
 
-    accounts_proxy = dict(zip(accounts[number_to_start_from-1:], PROXIES[number_to_start_from-1:])) if SETTINGS.USE_PROXY else accounts[number_to_start_from-1:]
+    accounts_proxy = dict(zip(ACCOUNTS[number_to_start_from-1:], PROXIES[number_to_start_from-1:])) if SETTINGS.USE_PROXY else ACCOUNTS[number_to_start_from-1:]
 
     wallets = [
         {
