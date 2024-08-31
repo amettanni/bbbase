@@ -1,0 +1,16 @@
+[
+    {
+        "inputs": [],
+        "name": "fallback",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "vote",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    }
+]
